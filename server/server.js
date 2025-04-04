@@ -21,6 +21,7 @@ class Server {
         this.app.use('/api/usuario', require('../routes/usuario')); // Asegúrate de que 'user' esté bien definido
         this.app.use('/api/entrevista', require('../routes/entrevista')); // Asegúrate de que 'user' esté bien definido
         this.app.use('/api/diagrama', require('../routes/diagrama')); // Asegúrate de que 'user' esté bien definido
+        this.app.use('/api/evaluacion', require('../routes/evaluacion')); // Asegúrate de que 'user' esté bien definido
 
     }
 

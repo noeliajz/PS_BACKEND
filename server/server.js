@@ -8,18 +8,17 @@ class Server {
         this.app = express();
         this.port = process.env.PORT || 8080;
         this.middleware();
-/*         this.routes();
- */    }
+        this.routes();
+    }
 
     middleware() {
         this.app.use(express.json());
         this.app.use(morgan('dev'));
     }
 
-    /* routes() {
-        this.app.use('/api', require('../routes/user')); // Asegúrate de que 'user' esté bien definido
-        this.app.use('/api/product', require('../routes/product')); // Ruta para productos
-    } */
+    routes() {
+        this.app.use('/api/foro', require('../routes/foro')); // Asegúrate de que 'user' esté bien definido
+    }
 
     listen() {
         conectarbd();

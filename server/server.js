@@ -18,6 +18,9 @@ class Server {
 
     routes() {
         this.app.use('/api/foro', require('../routes/foro')); // Asegúrate de que 'user' esté bien definido
+        this.app.use('/api/usuario', require('../routes/usuario')); // Asegúrate de que 'user' esté bien definido
+        this.app.use('/api/entrevista', require('../routes/entrevista')); // Asegúrate de que 'user' esté bien definido
+
     }
 
     listen() {
